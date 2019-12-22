@@ -50,6 +50,7 @@ while True:
 	rects = detector.detectMultiScale(gray, scaleFactor=1.1, 
 		minNeighbors=5, minSize=(30, 30),
 		flags=cv2.CASCADE_SCALE_IMAGE)
+	number_of_faces = len(rects)
 
 	# OpenCV returns bounding box coordinates in (x, y, w, h) order
 	# but we need them in (top, right, bottom, left) order, so we
